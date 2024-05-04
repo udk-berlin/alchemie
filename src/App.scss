@@ -5,12 +5,12 @@
 .header {
   width: 100vw; 
   background-color: white;
-  font-size: 1vw;
+  font-size: 0.75vw;
   display: flex;
   align-items: center;  
   justify-content: space-between;
   position: fixed;
-  padding: 1.5vw;
+  padding: 1vw;
   box-sizing: border-box;
   background-color: white;
   overflow: hidden;
@@ -20,7 +20,7 @@
   }
 } 
 
-.scrollContainer {
+.startContainer {
   background-color: red;
   width: 100vw;
   height: 100vh;
@@ -31,9 +31,15 @@
   }
 }
 
+.prozessContainer {
+  background-color: whie;
+  width: 100vw;
+  height: 100vh;
+}
+
 footer {
   width: 100vw; 
-  font-size: 0.75vw;
+  font-size: 0.5vw;
   background-color: white;
   display: flex;
   align-items: center;  
@@ -41,7 +47,7 @@ footer {
   position: fixed;
   box-sizing: border-box;
   bottom: 0;
-  padding: 1.5vw;
+  padding: 1vw;
   h1 {
     margin: 0;
   }

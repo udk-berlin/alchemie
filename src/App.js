@@ -14,8 +14,11 @@ class App extends React.Component {
           <h1>Universität der Künste Berlin</h1>
         </div>
 
-        <div className="scrollContainer">
+        <div className="startContainer">
           <img src="./images/image.png"></img>
+        </div>
+
+        <div className="prozessContainer">
         </div>
 
         <footer>
