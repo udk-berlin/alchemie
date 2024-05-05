@@ -1,0 +1,16 @@
+.header {
+    width: 100vw; 
+    background-color: lightblue;
+    font-size: clamp(6px, 0.75vw, 50px);
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+    position: fixed;
+    padding: 1vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: 0;
+    h1 {
+      margin: 0
+    }
+}

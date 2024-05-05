@@ -1,0 +1,18 @@
+.footer {
+    width: 100vw; 
+    font-size: clamp(6px, 0.5vw, 40px);
+    background-color: lightblue;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    padding: 1vw;
+    color: red;
+    h1 {
+      margin: 0;
+    }
+}
+  
+  

@@ -1,34 +1,39 @@
-import logo from "./logo.svg";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import "./App.scss";
 import React from "react";
 
 class App extends React.Component {
   constructor() {
     super();
+    this.elementWidth = React.createRef()
+    this.state = {
+      windowWidth: 999,
+    };
   }
+
+  componentDidMount() {
+    window.addEventListener("resize", () => {
+      console.log(this.elementWidth.current.offsetWidth);
+      this.setState({ windowWidth: this.elementWidth.current.offsetWidth });
+    });
+  }
+
   render() {
     return (
-      <div>
-        <div className="header">
-          <h1>Alchemie der Udk</h1>
-          <h1>Universität der Künste Berlin</h1>
-        </div>
+      <div ref={this.elementWidth}>
+        <Header></Header>
 
-        <div className="startContainer">
+        {/* <div className="startContainer">
           <img src="./images/image.png"></img>
         </div>
 
         <div className="prozessContainer">
-        </div>
+        </div> */}
 
-        <footer>
-          <div className="container">
-            <h1>Kontakt</h1>
-          </div>
-          <div className="container">
-            <h1>Impressum</h1>
-          </div>
-        </footer>
+        <Footer
+          windowWidth = {this.state.windowWidth}
+        ></Footer>
       </div>
     );
   }
