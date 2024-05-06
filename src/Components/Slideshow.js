@@ -8,8 +8,8 @@ class Slidehow extends React.Component {
   render() {
     return (
         <div className="slideShowContainer">
-            <img src="./images/image.png"></img>
-            <img className="fade" src="./images/image1.png"></img>
+            <img alt="" src="./images/image.png"></img>
+            <img alt="" className="fade" src="./images/image1.png"></img>
             <div className="overlay"></div>
         </div>
     );

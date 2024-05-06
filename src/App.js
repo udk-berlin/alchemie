@@ -5,7 +5,7 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import Slidehow from "./Components/Slideshow";
+
 import Main from "./Pages/Main";
 import Contact from "./Pages/Contact";
 
@@ -19,6 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ windowWidth: this.elementWidth.current.offsetWidth });
     window.addEventListener("resize", () => {
       console.log(this.elementWidth.current.offsetWidth);
       this.setState({ windowWidth: this.elementWidth.current.offsetWidth });
