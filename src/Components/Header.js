@@ -12,7 +12,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <h1><Link to="/">Alchemie der UdK</Link></h1>
-        <div className="languageSelector">
+        <div className="languageSelector"  style={{ display : this.props.windowWidth < 700 ? 'none' : 'flex'}}>
           <h1 onClick={()=> this.props.changeLanguage('DE')} style={{color: this.props.language === 'DE' ? 'black' : 'lightgrey'}}>DE</h1>
           <h1 onClick={()=> this.props.changeLanguage('EN')} style={{color: this.props.language === 'EN' ? 'black' : 'lightgrey'}}>EN</h1>
         </div>

@@ -35,11 +35,11 @@ class App extends React.Component {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<Main/>} />
+          <Route path="/" element={<Main />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        <Header language={this.state.language} changeLanguage={this.changeLanguage}></Header>
+        <Header windowWidth={this.state.windowWidth} language={this.state.language} changeLanguage={this.changeLanguage}></Header>
         <div ref={this.elementWidth}>
           <Footer windowWidth={this.state.windowWidth}></Footer>
         </div>
