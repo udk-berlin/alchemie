@@ -1,0 +1,35 @@
+.slideShowContainer {
+    width: 100vw; 
+    height: 100vh;
+    background-color: red;
+    position: relative;
+    img {
+        width: 100vw; 
+        height: 100vh; 
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .overlay {
+        width: 100vw;
+        height: 100vh; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: yellow;
+        opacity: 0.5;
+    }
+    .fade {
+        animation-duration: 6s;
+        animation-name: fade;
+        animation-iteration-count: infinite;
+    }
+    @keyframes fade {
+        0% { opacity: 0;}
+        25% { opacity: 1;}
+        50% { opacity: 1;}
+        75% { opacity: 0;}
+        100% { opacity: 0;}
+    }
+}

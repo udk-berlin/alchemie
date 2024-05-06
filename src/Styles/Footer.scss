@@ -9,9 +9,14 @@
     box-sizing: border-box;
     bottom: 0;
     padding: 1vw;
-    color: red;
+    color: black;
     h1 {
       margin: 0;
+    }
+    a:any-link {
+      color: black;
+      text-decoration-color: black;
+      text-decoration: none;
     }
 }
   

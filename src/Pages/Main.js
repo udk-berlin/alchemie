@@ -1,5 +1,6 @@
 import "../App.scss";
 import React from "react";
+import Slidehow from "../Components/Slideshow";
 
 
 class Main extends React.Component {
@@ -12,7 +13,7 @@ class Main extends React.Component {
 
   render() {
     return (
-        <h1>This is the main Page</h1>
+      <Slidehow></Slidehow>
     );
   }
 }

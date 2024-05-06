@@ -1,24 +1,22 @@
 .header {
-    width: 100vw; 
-    background-color: white;
-    font-size: clamp(6px, 0.8vw, 50px);
-    display: flex;
-    align-items: center;  
-    justify-content: space-between;
-    position: fixed;
-    padding: 3vw;
-    box-sizing: border-box;
-    overflow: hidden;
-    top: 0;
+  width: 100vw;
+  background-color: white;
+  font-size: clamp(6px, 0.8vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  padding: 2vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  top: 0;
+  color: black;
+  h1 {
+    margin: 0;
+  }
+  a:any-link {
     color: black;
-    h1 {
-      margin: 0
-    }
-
-    a:any-link {
-      color: black;
-      text-decoration-color: black;
-      text-decoration: none;
-    }
-    
+    text-decoration-color: black;
+    text-decoration: none;
+  }
 }
