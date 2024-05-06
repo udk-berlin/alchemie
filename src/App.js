@@ -5,17 +5,22 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-
 import Main from "./Pages/Main";
 import Contact from "./Pages/Contact";
 
 class App extends React.Component {
   constructor() {
     super();
+    this.changeLanguage = this.changeLanguage.bind(this);
     this.elementWidth = React.createRef();
     this.state = {
       windowWidth: 999,
+      language: "DE",
     };
+  }
+
+  changeLanguage(l) {
+    this.setState({ language: l });
   }
 
   componentDidMount() {
@@ -26,10 +31,6 @@ class App extends React.Component {
     });
   }
 
-  nextPath(path) {
-    this.props.history.push(path);
-  }
-
   render() {
     return (
       <div>
@@ -37,12 +38,11 @@ class App extends React.Component {
           <Route path="/" element={<Main/>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        
-        <Header></Header>
+
+        <Header language={this.state.language} changeLanguage={this.changeLanguage}></Header>
         <div ref={this.elementWidth}>
           <Footer windowWidth={this.state.windowWidth}></Footer>
         </div>
-        
       </div>
     );
   }
