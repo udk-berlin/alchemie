@@ -1,0 +1,25 @@
+
+.processContainer {
+    width: 100vw; 
+    height: 100vh; 
+    position: relative;
+    box-sizing: border-box;
+    padding: 2vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .processContent {
+        width: 40vw;
+        p {
+            font-size: 1.5vw;
+        }
+    }
+}
+
+.headline {
+    padding: 2vw;
+    top: 4vw;
+    position: sticky;
+    font-size: clamp(30px, 0.8vw, 50px);
+    
+}
