@@ -9,19 +9,22 @@ class Footer extends React.Component {
     super();
   }
 
-  componentDidMount () {}
+  componentDidMount() {}
 
-  componentDidUpdate(){
-  }
+  componentDidUpdate() {}
 
   render() {
     return (
-      <div className="footer" style={{ display : this.props.windowWidth < 700 ? 'none' : 'flex'}}>
+      <div className="footer" style={{ display: this.props.windowWidth < 700 ? "none" : "flex" }}>
         <div className="container">
-          <h1><Link to="/contact">Kontakt</Link></h1>
+          <h1>
+            <Link to="/contact">Kontakt</Link>
+          </h1>
         </div>
         <div className="container">
-          <h1>Impressum</h1>
+          <h1>
+            <Link to="/impressum">Impressum</Link>
+          </h1>
         </div>
       </div>
     );

@@ -2,7 +2,7 @@ import "../App.scss";
 import React from "react";
 import Slidehow from "../Components/Slideshow";
 import Process from "../Components/Process";
-// import Main from "../Styles/Main.scss"
+import Participants from "../Components/Participants";
 
 
 class Main extends React.Component {
@@ -14,6 +14,7 @@ class Main extends React.Component {
       <>
       <Slidehow></Slidehow>
       <Process></Process>
+      <Participants></Participants>
       </>
     );
   }
