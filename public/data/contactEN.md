@@ -1,6 +1,2 @@
-# this is some text
-## this is even more text
-#### this is even more text
-##### this is even more text
-###### this is even more text
-this is even more text
+# Contact
+English Lorem Ipsum Contact

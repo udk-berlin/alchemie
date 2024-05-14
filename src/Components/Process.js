@@ -1,6 +1,6 @@
 import "../Styles/Process.scss"
 import React from "react";
-import Markdown from 'react-markdown'
+import Markdown from 'react-markdown';
 
 class Process extends React.Component {
   constructor(){
@@ -15,14 +15,12 @@ class Process extends React.Component {
     fetch("./data/processDE.md")
     .then((r) => r.text())
     .then(text => {
-      console.log(text);
       this.setState({textDE : text}); 
     });
 
     fetch("./data/processEN.md")
     .then((r) => r.text())
     .then(text => {
-      console.log(text);
       this.setState({textEN : text}); 
     });
   }

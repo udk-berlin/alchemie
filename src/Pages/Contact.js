@@ -32,7 +32,6 @@ class Contact extends React.Component {
   render() {
     return (
         <div className="contactDiv">
-          <h1>{this.props.language === 'DE' ? 'Kontakt' : 'Contact'}</h1>
           <Markdown>{this.props.language === 'DE' ? this.state.textDE : this.state.textEN}</Markdown>
         </div>
     );
