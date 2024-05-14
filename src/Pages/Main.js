@@ -12,9 +12,9 @@ class Main extends React.Component {
   render() {
     return (
       <>
-      <Slidehow></Slidehow>
-      <Process></Process>
-      <Participants></Participants>
+      <Slidehow language = {this.props.language}></Slidehow>
+      <Process language = {this.props.language}></Process>
+      <Participants language = {this.props.language}></Participants>
       </>
     );
   }

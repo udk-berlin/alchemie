@@ -1,14 +1,39 @@
 import "../Styles/Process.scss"
 import React from "react";
+import Markdown from 'react-markdown'
 
 class Process extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      textDE : '',
+      textEN : ''
+    }
+  }
+
+  componentDidMount(){
+    fetch("./data/processDE.md")
+    .then((r) => r.text())
+    .then(text => {
+      console.log(text);
+      this.setState({textDE : text}); 
+    });
+
+    fetch("./data/processEN.md")
+    .then((r) => r.text())
+    .then(text => {
+      console.log(text);
+      this.setState({textEN : text}); 
+    });
+  }
+  
   render() {
     return (
         <>
-        <div className="headline">Prozess</div>
+        <div className="headline">{this.props.language === 'DE' ? "Prozess" : "Process"}</div>
         <div className="processContainer">
           <div className="processContent">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <Markdown>{this.props.language === 'DE' ? this.state.textDE : this.state.textEN}</Markdown>
           </div>
         </div>
         </>

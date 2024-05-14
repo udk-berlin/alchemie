@@ -19,7 +19,6 @@ class Contact extends React.Component {
     .then(text => {
       console.log(text);
       this.setState({textDE : text}); 
-
     });
 
     fetch("./data/contactEN.md")
@@ -27,7 +26,6 @@ class Contact extends React.Component {
     .then(text => {
       console.log(text);
       this.setState({textEN : text}); 
-
     })
   }
 
@@ -35,7 +33,6 @@ class Contact extends React.Component {
     return (
         <div className="contactDiv">
           <h1>{this.props.language === 'DE' ? 'Kontakt' : 'Contact'}</h1>
-          {/* <p>{this.state.text}</p> */}
           <Markdown>{this.props.language === 'DE' ? this.state.textDE : this.state.textEN}</Markdown>
         </div>
     );
