@@ -10,7 +10,18 @@
     .participantsContent {
         width: 40vw;
         p {
-            font-size: 1.5vw;
+            font-size: clamp(15px, 1.5vw, 25px);
+        }
+        h1 {
+            font-size: clamp(15px, 1.5vw, 25px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .participantsContainer {
+        .participantsContent {
+            width: 99vw;
         }
     }
 }
@@ -19,6 +30,6 @@
     padding: 2vw;
     top: 4vw;
     position: sticky;
-    font-size: clamp(30px, 0.8vw, 50px);    
+    font-size: clamp(15px, 1.5vw, 25px);
     background-color: white;
 }
