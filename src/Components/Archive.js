@@ -1,6 +1,5 @@
 import "../Styles/Archive.scss";
 import React from "react";
-// import Markdown from "react-markdown";
 
 const archiveItem = ['LOREM IPSUM', 'GUBERGEN', 'NONUMY', 'SANCTUS']; 
 

@@ -16,14 +16,6 @@
     }
 }
 
-@media (max-width: 767px) {
-    .processContainer {
-        .processContent {
-            width: 99vw;
-        }
-    }
-}
-
 .headlineProcess {
     padding: 2vw;
     top: 5vw !important;
@@ -32,3 +24,16 @@
     background-color: white;
     z-index: 100;
 }
+
+
+@media (max-width: 767px) {
+    .processContainer {
+        .processContent {
+            width: 99vw;
+        }
+    }
+    .headlineProcess {
+        top: 7vw !important;
+    }
+}
+
