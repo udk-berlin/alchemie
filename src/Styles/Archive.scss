@@ -6,28 +6,31 @@
   width: 100vw;
   justify-content: space-between;
   margin-bottom: 100vh;
+  overflow: hidden;
   .archive {
     width: 70vw;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
     .archiveItem {
-      width: 20vw;
+      width: auto;
       height: 20vw;
       background-color: lightgray;
-      margin: 2vw;
       margin-left: 0;
       margin-top: 0;
-      display: inline-block;
     }
   }
   .archiveNav {
-    
     width: 30vw;
     align-items: start;
     display: inline-block;
+    margin-bottom: 2vw;
     .navItem {
       background-color: lightgray;
       display: inline;
-      margin: 10px;
+      margin: 0.5vw;
       box-sizing: border-box;
       padding: 1vw;
       font-size: 2vw;
@@ -36,6 +39,15 @@
       height: auto !important;
     }
   }
+}
+
+@media (max-width: 767px) {
+    .archiveContainer {
+        display: inline-block;
+        .archive {
+            width: 96vw;
+        }
+    }
 }
 
 .headline {
