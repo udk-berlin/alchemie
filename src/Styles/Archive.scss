@@ -1,18 +1,47 @@
 .archiveContainer {
-    width: 100vw; 
-    height: 100vh; 
-    position: relative;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2vw;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  margin-bottom: 100vh;
+  .archive {
+    width: 70vw;
     box-sizing: border-box;
-    padding: 2vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    .archiveItem {
+      width: 20vw;
+      height: 20vw;
+      background-color: lightgray;
+      margin: 2vw;
+      margin-left: 0;
+      margin-top: 0;
+      display: inline-block;
+    }
+  }
+  .archiveNav {
+    
+    width: 30vw;
+    align-items: start;
+    display: inline-block;
+    .navItem {
+      background-color: lightgray;
+      display: inline;
+      margin: 10px;
+      box-sizing: border-box;
+      padding: 1vw;
+      font-size: 2vw;
+      white-space: nowrap;
+      display: inline-block;
+      height: auto !important;
+    }
+  }
 }
 
 .headline {
-    padding: 2vw;
-    top: 6vw !important;
-    position: sticky;
-    font-size: clamp(15px, 1.5vw, 25px);
-    z-index: 200;
+  padding: 2vw;
+  top: 5vw !important;
+  position: sticky;
+  font-size: clamp(15px, 1.5vw, 25px);
+  z-index: 200;
 }
