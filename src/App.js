@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Main from "./Pages/Main";
 import Impressum from "./Pages/Impressum";
 import Contact from "./Pages/Contact";
+import Project from "./Pages/Project";
 
 class App extends React.Component {
   constructor() {
@@ -36,7 +37,8 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Main language={this.state.language} />} />
           <Route path="/contact" element={<Contact language={this.state.language} />} />
-          <Route path="/impressum" element={<Impressum language={this.state.language}/>} />
+          <Route path="/impressum" element={<Impressum language={this.state.language} />} />
+          <Route path="/project" element={<Project language={this.state.language} person={'Max Mustermann'} projectName={'ProjectName'} />} />
         </Routes>
 
         <Header windowWidth={this.state.windowWidth} language={this.state.language} changeLanguage={this.changeLanguage}></Header>

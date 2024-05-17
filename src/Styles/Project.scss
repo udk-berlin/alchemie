@@ -1,0 +1,34 @@
+.projectDiv {
+    width: 100vw;
+    height: 100vh; 
+    padding: 2vw; 
+    padding-top: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    .textDiv {
+        margin-left: 2vw;
+        width: 25vw;
+        background-color: aqua;
+        h1 {
+            font-size: 1.5vw;
+        }
+        h2 {
+            font-size: 1.5vw;
+        }
+        p {
+            font-size: 1.5vw;
+        }
+    }
+    
+    img {
+        width: 50vw; 
+    }
+    h1 {
+        font-size: 1.5vw;
+    }
+    p {
+        max-width: 30vw;
+        font-size: clamp(15px, 1vw, 50px);
+    }
+}
