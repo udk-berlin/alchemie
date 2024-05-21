@@ -1,6 +1,5 @@
 .projectDiv {
     width: 100vw;
-    height: 100vh; 
     padding: 2vw; 
     padding-top: 10vw;
     display: grid;
@@ -8,27 +7,34 @@
     justify-content: flex-start;
     .textDiv {
         margin-left: 2vw;
-        width: 25vw;
-        background-color: aqua;
+        width: 35vw;
         h1 {
             font-size: 1.5vw;
+            margin-top: 0;
         }
         h2 {
-            font-size: 1.5vw;
+            font-size: 1.25vw;
+            margin-top: 0;
         }
         p {
-            font-size: 1.5vw;
+            font-size: 1.25vw;
+            margin-top: 0;
         }
     }
-    
     img {
-        width: 50vw; 
+        width: 60vw; 
     }
-    h1 {
-        font-size: 1.5vw;
-    }
-    p {
-        max-width: 30vw;
-        font-size: clamp(15px, 1vw, 50px);
+}
+
+@media (max-width: 767px) {
+    .projectDiv {
+        grid-template-columns: 1fr;
+        .textDiv {
+            width: 98vw;
+            margin-top: 5vw;
+        }
+        img {
+            width: 100vw;
+        }
     }
 }

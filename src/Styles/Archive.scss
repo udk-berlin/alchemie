@@ -37,7 +37,7 @@
       white-space: nowrap;
       display: inline-block;
       height: auto !important;
-      font-size: clamp(15px, 1.5vw, 25px);;
+      font-size: clamp(15px, 1.5vw, 25px);
     }
   }
 }
@@ -50,20 +50,24 @@
   z-index: 200;
 }
 
-
 @media (max-width: 767px) {
-    .archiveContainer {
-        display: inline-block;
-        .archive {
-            width: 96vw;
-            grid-template-columns: 1fr;
-        }
-        .archiveNav {
-            width: 50vw;
-        }
+  .archiveContainer {
+    display: inline-block;
+    .archive {
+      width: 96vw;
+      grid-template-columns: 1fr;
     }
+    .archiveItem {
+      width: 96vw !important;
+      height: 96vw !important;
+      background-color: aqua;
+    }
+    .archiveNav {
+      width: 50vw;
+    }
+  }
 
-    .headline {
-        top: 7vw !important;
-    }
+  .headline {
+    top: 7vw !important;
+  }
 }
