@@ -17,6 +17,8 @@ class App extends React.Component {
     this.state = {
       windowWidth: 999,
       language: "DE",
+
+      listItems: [],
     };
   }
 
@@ -25,7 +27,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('mount');
+    console.log("mount");
     this.setState({ windowWidth: this.elementWidth.current.offsetWidth });
     window.addEventListener("resize", () => {
       console.log(this.elementWidth.current.offsetWidth);
@@ -38,34 +40,39 @@ class App extends React.Component {
     });
 
     client
-    .query({
-      query: gql`
-        {
-          contexts {
-            name,id, template
-          }   
-        }
-      `,
-    })
-    .then((result) => console.log(result));
+      .query({
+        query: gql`
+          {
+            contexts {
+              name
+              id
+              template
+            }
+          }
+        `,
+      })
+      .then((result) => this.setState({ listItems: result.data.contexts }));
   }
 
   render() {
-    return (
-      <div>
-        <Routes>
-          <Route path="/" element={<Main language={this.state.language} />} />
-          <Route path="/contact" element={<Contact language={this.state.language} />} />
-          <Route path="/impressum" element={<Impressum language={this.state.language} />} />
-          <Route path="/project" element={<Project language={this.state.language} person={"Max Mustermann"} projectName={"ProjectName"} />} />
-        </Routes>
+    // if (this.state.listItems !== undefined) {
+      console.log(this.state.listItems);
+      return (
+        <div>
+          <Routes>
+            <Route path="/" element={<Main listItems={this.state.listItems} language={this.state.language} />} />
+            <Route path="/contact" element={<Contact language={this.state.language} />} />
+            <Route path="/impressum" element={<Impressum language={this.state.language} />} />
+            <Route path="/project/:id" element={<Project language={this.state.language} person={"Max Mustermann"} projectName={"ProjectName"} />} />
+          </Routes>
 
-        <Header windowWidth={this.state.windowWidth} language={this.state.language} changeLanguage={this.changeLanguage}></Header>
-        <div ref={this.elementWidth}>
-          <Footer windowWidth={this.state.windowWidth}></Footer>
+          <Header windowWidth={this.state.windowWidth} language={this.state.language} changeLanguage={this.changeLanguage}></Header>
+          <div ref={this.elementWidth}>
+            <Footer windowWidth={this.state.windowWidth}></Footer>
+          </div>
         </div>
-      </div>
-    );
+      );
+    // }
   }
 }
 

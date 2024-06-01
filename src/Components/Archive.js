@@ -16,14 +16,15 @@ class Archive extends React.Component {
   }
 
   render() {
+    console.log(this.props.listItems);
     return (
       <>
         <div className="headline">{this.props.language === "DE" ? "Projekte" : "Projects"}</div>
         <div className="archiveContainer">
           <div className="archiveNav">
-            {archiveItem.map((item) => (
+            {this.props.listItems.map((item) => (
               <div onClick={() => this.changeAcitveItem(item)} className="navItem" style={{ background: this.state.activeMenuItem === item ? "red" : "lightgrey" }}>
-                {item}
+                {item.name}
               </div>
             ))}
           </div>

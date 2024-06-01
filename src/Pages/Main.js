@@ -10,12 +10,12 @@ class Main extends React.Component {
   componentDidMount() {
   }
 
-  render() {
+  render() {  
     return (
       <>
       <Slidehow language = {this.props.language}></Slidehow>
       <Process language = {this.props.language}></Process>
-      <Archive language = {this.props.language}></Archive>
+      <Archive listItems={this.props.listItems} language = {this.props.language}></Archive>
       <Participants language = {this.props.language}></Participants>
       </>
     );
