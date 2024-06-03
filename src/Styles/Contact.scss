@@ -4,8 +4,12 @@
     h1 {
         font-size: 1.5vw;
     }
+    h3 {
+        margin-bottom: 0;
+    }
     p {
         max-width: 30vw;
         font-size: clamp(15px, 1vw, 50px);
+        margin-top: 0;
     }
 }

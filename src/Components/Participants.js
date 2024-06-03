@@ -6,25 +6,32 @@ class Participants extends React.Component {
   constructor() {
     super();
     this.state = {
-      text: "",
+      textDE: "",
+      textEN: "",
     };
   }
 
   componentDidMount() {
-    fetch("./data/persons.md")
+    fetch("./data/personsDE.md")
       .then((r) => r.text())
       .then((text) => {
-        this.setState({ text: text });
+        this.setState({ textDE: text });
+      });
+
+    fetch("./data/personsEN.md")
+      .then((r) => r.text())
+      .then((text) => {
+        this.setState({ textEN: text });
       });
   }
 
   render() {
     return (
       <>
-        <div className="headline">{this.props.language === "DE" ? "Personen" : "Persons"}</div>
+        <div className="headline">{this.props.language === "DE" ? "Unterstützer*innen" : "Supporters"}</div>
         <div className="participantsContainer">
           <div className="participantsContent">
-            <Markdown>{this.state.text}</Markdown>
+            <Markdown>{this.props.language === "DE" ? this.state.textDE : this.state.textEN}</Markdown>
           </div>
         </div>
       </>

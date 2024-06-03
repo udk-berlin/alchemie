@@ -1,7 +1,6 @@
 import "../Styles/Archive.scss";
 import React from "react";
-
-const archiveItem = ["Freiheit", "Neugier", "Kollaborative Kreativität", "Zuhören", "Gerechtigkeit/Verteilung"];
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 class Archive extends React.Component {
   constructor() {
@@ -15,8 +14,8 @@ class Archive extends React.Component {
     this.setState({ activeMenuItem: i });
   }
 
-  render() {
-    console.log(this.props.listItems);
+  render() {  
+    console.log('archive', this.props.itemData)
     return (
       <>
         <div className="headline">{this.props.language === "DE" ? "Projekte" : "Projects"}</div>
@@ -29,18 +28,11 @@ class Archive extends React.Component {
             ))}
           </div>
           <div className="archive">
-            <div className="archiveItem">
-              <img src="./images/assemblage.png"></img>
-            </div>
-            <div className="archiveItem">
-              <img src="./images/grundrauschen.png"></img>
-            </div>
-            <div className="archiveItem">
-              <img src="./images/strang.png"></img>
-            </div>
-            <div className="archiveItem">
-              <img src="./images/zuhoren.png"></img>
-            </div>
+            {this.props.itemData.map((item) => (
+              <div className="archiveItem">
+                <Link to={"/project/" + item.id}><img src={item.thumbnail}></img></Link>
+              </div>
+            ))}
           </div>
         </div>
       </>

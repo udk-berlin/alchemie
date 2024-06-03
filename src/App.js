@@ -19,6 +19,7 @@ class App extends React.Component {
       language: "DE",
 
       listItems: [],
+      itemData: [],
     };
   }
 
@@ -52,26 +53,43 @@ class App extends React.Component {
         `,
       })
       .then((result) => this.setState({ listItems: result.data.contexts }));
+
+    client
+      .query({
+        query: gql`
+          {
+            items {
+              name
+              id
+              thumbnail
+              template
+              parents {
+                id
+                name
+              }
+            }
+          }
+        `,
+      })
+      .then((result) => this.setState({itemData : result.data.items}));
   }
 
   render() {
-    // if (this.state.listItems !== undefined) {
-      console.log(this.state.listItems);
-      return (
-        <div>
-          <Routes>
-            <Route path="/" element={<Main listItems={this.state.listItems} language={this.state.language} />} />
-            <Route path="/contact" element={<Contact language={this.state.language} />} />
-            <Route path="/impressum" element={<Impressum language={this.state.language} />} />
-            <Route path="/project/:id" element={<Project language={this.state.language} person={"Max Mustermann"} projectName={"ProjectName"} />} />
-          </Routes>
+    return (
+      <div>
+        <Routes>
+          <Route path="/" element={<Main listItems={this.state.listItems} itemData={this.state.itemData} language={this.state.language} />} />
+          <Route path="/contact" element={<Contact language={this.state.language} />} />
+          <Route path="/impressum" element={<Impressum language={this.state.language} />} />
+          <Route path="/project/:id" element={<Project language={this.state.language} person={"Max Mustermann"} projectName={"ProjectName"} />} />
+        </Routes>
 
-          <Header windowWidth={this.state.windowWidth} language={this.state.language} changeLanguage={this.changeLanguage}></Header>
-          <div ref={this.elementWidth}>
-            <Footer windowWidth={this.state.windowWidth}></Footer>
-          </div>
+        <Header windowWidth={this.state.windowWidth} language={this.state.language} changeLanguage={this.changeLanguage}></Header>
+        <div ref={this.elementWidth}>
+          <Footer windowWidth={this.state.windowWidth}></Footer>
         </div>
-      );
+      </div>
+    );
     // }
   }
 }
