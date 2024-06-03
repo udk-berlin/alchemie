@@ -21,10 +21,10 @@ class Slidehow extends React.Component {
         <img alt="" className="fade" src="./images/image1.png"></img>
         <div className="overlay"></div>
 
-        <div onClick={()=> this.handleClick()} className="arrowContainer">
+        {/* <div onClick={()=> this.handleClick()} className="arrowContainer">
           <p>zum Prozess</p>
           <p>↓</p>
-        </div>
+        </div> */}
       </div>
     );
   }
