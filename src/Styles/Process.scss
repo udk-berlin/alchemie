@@ -28,8 +28,10 @@
 
 @media (max-width: 767px) {
     .processContainer {
+        height: 200vh;
         .processContent {
             width: 99vw;
+            top: 10vw;
         }
     }
     .headlineProcess {
