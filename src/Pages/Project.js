@@ -1,6 +1,7 @@
 import "../App.scss";
 import React from "react";
 import "../Styles/Project.scss";
+import parse from "html-react-parser";
 
 class Project extends React.Component {
   constructor(props) {
@@ -13,34 +14,41 @@ class Project extends React.Component {
 
   componentDidMount() {
     const urlId = window.location.href.split("/")[4];
-    console.log(urlId);
-    this.setState({ id: urlId });
+    this.fetchData(urlId);
   }
 
-  componentDidUpdate() {
-    if (this.state.data.length == 0) {
-      fetch("https://api.alchemie.udk-berlin.de/api/v2/" + this.state.id + "/render/json")
-        .then((resp) => resp.json())
-        .then((json) => {
-          this.setState({ data: json });
-        });
-    }
+  fetchData(id) {
+    this.id = id;
+    fetch("https://api.alchemie.udk-berlin.de/api/v2/" + this.id + "/render/json")
+      .then((resp) => resp.json())
+      .then((json) => {
+        this.setState({ data: json });
+      });
   }
+
+  componentDidUpdate() {}
 
   render() {
     if (this.state.data.abstract !== undefined) {
-      console.log(this.state.data);
+      console.log(this.state.data.abstract);
       return (
         <>
           <div className="projectDiv">
             <img src={this.state.data.abstract.thumbnail}></img>
+
             <div className="textDiv">
               <h1>{this.state.data.abstract.name}</h1>
-              <p>{this.state.data.languages.DE.content[0].content}</p>
+              {(Object.keys(this.state.data.languages[this.props.language].content).length) !== 0 ? (
+                Object.keys(this.state.data.languages[this.props.language].content).map((index) => <div>{parse(this.state.data.languages[this.props.language].content[index].formatted_content)}</div>)
+              ) : (
+                <p>{this.props.language === "DE" ? "Noch kein Inhalt vorhanden, bitte kommen Sie später wieder" : "No content available yet, please come back later"}</p>
+              )}
             </div>
           </div>
         </>
       );
+    } else {
+      console.log("no matching content");
     }
   }
 }

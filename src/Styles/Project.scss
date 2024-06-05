@@ -1,10 +1,10 @@
 .projectDiv {
-    width: 100vw;
+    width: 50vw;
+    margin-left: 19.5vw;
     padding: 2vw; 
     padding-top: 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: flex-start;
     .textDiv {
         margin-left: 2vw;
         width: 35vw;
@@ -20,15 +20,21 @@
             font-size: 1.25vw;
             margin-top: 0;
         }
+        ul {
+            font-size: 1.25vw;
+            margin-top: 0;
+        }
     }
     img {
-        width: 60vw; 
+        width: 20vw; 
     }
 }
 
 @media (max-width: 767px) {
     .projectDiv {
         grid-template-columns: 1fr;
+        width: 99vw;
+        margin-left: 0;
         .textDiv {
             width: 98vw;
             margin-top: 5vw;

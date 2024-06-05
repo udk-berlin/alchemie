@@ -15,7 +15,6 @@ class Archive extends React.Component {
   }
 
   render() {  
-    console.log('archive', this.props.itemData)
     return (
       <>
         <div className="headline">{this.props.language === "DE" ? "Projekte" : "Projects"}</div>
