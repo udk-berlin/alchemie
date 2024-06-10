@@ -11,7 +11,6 @@ class Main extends React.Component {
   }
 
   render() {  
-    console.log('main', this.props.itemData); 
     return (
       <>
       <Slidehow language = {this.props.language}></Slidehow>

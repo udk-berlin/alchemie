@@ -7,6 +7,8 @@ class Archive extends React.Component {
     super();
     this.state = {
       activeMenuItem: "",
+      storyData: [],
+      projectData: [],
     };
   }
 
@@ -14,7 +16,17 @@ class Archive extends React.Component {
     this.setState({ activeMenuItem: i });
   }
 
-  render() {  
+  componentDidUpdate() {
+    this.props.itemData.map((item) => {
+      if (item.template === "story") {
+        console.log("story", item);
+      } else if (item.template === "project") {
+        console.log("project", item);
+      }
+    });
+  }
+
+  render() {
     return (
       <>
         <div className="headline">{this.props.language === "DE" ? "Projekte" : "Projects"}</div>
@@ -28,9 +40,16 @@ class Archive extends React.Component {
           </div>
           <div className="archive">
             {this.props.itemData.map((item) => (
-              <div className="archiveItem">
-                <Link to={"/project/" + item.id}><img src={item.thumbnail}></img></Link>
-              </div>
+              <>
+                <div className="archiveItem">
+                  {/* <div className="overlay"></div> */}
+                  <div className="imageContainer">
+                    <Link to={"/project/" + item.id}>
+                      <img src={item.thumbnail}></img>
+                    </Link>
+                  </div>
+                </div>
+              </>
             ))}
           </div>
         </div>
