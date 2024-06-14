@@ -43,11 +43,20 @@ class Archive extends React.Component {
               <>
                 <div className="archiveItem">
                   {/* <div className="overlay"></div> */}
-                  <div className="imageContainer">
+
+                  {item.thumbnail !== "" ? (
                     <Link to={"/project/" + item.id}>
-                      <img src={item.thumbnail}></img>
+                      <div className="imageContainer">
+                        <img src={item.thumbnail} onError={(i) => (i.target.style.display = "none")}></img>
+                      </div>
                     </Link>
-                  </div>
+                  ) : (
+                    <Link to={"/project/" + item.id}>
+                    <div className="imageContainer" style={{ backgroundColor: item.template === "project" ? "red" : "blue", pointerEvents: "none", opacity: '0.1' }}>
+                      <img src={item.thumbnail} onError={(i) => (i.target.style.display = "none")}></img>
+                    </div>
+                    </Link>
+                  )}
                 </div>
               </>
             ))}

@@ -5,19 +5,20 @@
     padding-top: 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
     .textDiv {
-        margin-left: 2vw;
+        
         width: 35vw;
         h1 {
-            font-size: 1.5vw;
+            font-size: clamp(15px, 1.5vw, 25px);
             margin-top: 0;
         }
         h2 {
-            font-size: 1.25vw;
+            font-size: clamp(15px, 1.5vw, 25px);
             margin-top: 0;
         }
         p {
-            font-size: 1.25vw;
+            font-size: clamp(15px, 1.5vw, 25px);
             margin-top: 0;
         }
         ul {
@@ -33,14 +34,15 @@
 @media (max-width: 767px) {
     .projectDiv {
         grid-template-columns: 1fr;
-        width: 99vw;
+        width: 100vw;
         margin-left: 0;
+        box-sizing: border-box;
         .textDiv {
-            width: 98vw;
+            width: 96vw;
             margin-top: 5vw;
         }
         img {
-            width: 100vw;
+            width: 96vw;
         }
     }
 }
