@@ -15,7 +15,7 @@ class Archive extends React.Component {
 
     this.list = [];
     this.uniqueList = [];
-    this.data = [];
+    this.preData = [];
   }
 
   changeAcitveItem(i) {
@@ -37,10 +37,22 @@ class Archive extends React.Component {
   }
 
   render() {
-    if (this.state.activeMenuItem === "ALL") {
-      this.data = this.props.itemData;
+    console.log(this.props.itemData);
+    console.log(this.state.activeMenuItem)
+    if (this.state.activeMenuItem === "ALL" && this.state.mainFilterItem === "ALL") {
+      this.preData = this.props.itemData;
+    } else if(this.state.mainFilterItem === "Projekte") {
+      this.preData = this.props.itemData.filter((item) => item.template === "project" );
+    } else if(this.state.mainFilterItem === "Geschichten"){
+      this.preData = this.props.itemData.filter((item) => item.template === "story" );
+    }
+
+    if(this.state.activeMenuItem === "ALL"){
+      console.log('ALL');
+      this.data = this.preData; 
     } else {
-      this.data = this.props.itemData.filter((item) => item.parents[0].name === this.state.activeMenuItem);
+      console.log('sub filter')
+      this.data = this.preData.filter((item) => item.parents[0].name === this.state.activeMenuItem);
     }
 
     {
@@ -54,8 +66,6 @@ class Archive extends React.Component {
           this.uniqueList.push(element);
         }
       });
-
-      console.log(this.uniqueList);
     }
 
     return (
@@ -73,7 +83,7 @@ class Archive extends React.Component {
               </div>
             </div>
             <div className="archiveNav">
-              {this.uniqueList.map((item) => (
+              {this.uniqueList.map((item, key) => (
                 <div onClick={() => this.changeAcitveItem(item)} className="navItem" style={{ background: this.state.activeMenuItem === item ? "red" : "lightgrey" }}>
                   {item}
                 </div>
@@ -82,7 +92,7 @@ class Archive extends React.Component {
           </div>
 
           <div className="archive">
-            {this.data.map((item) => (
+            {this.data.map((item, key) => (
               <>
                 <div className="archiveItem">
                   {item.thumbnail !== "" ? (
