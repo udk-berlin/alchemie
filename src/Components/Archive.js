@@ -15,11 +15,12 @@ class Archive extends React.Component {
 
     this.list = [];
     this.uniqueList = [];
+    
     this.preData = [];
+    this.preList = [];
   }
 
   changeAcitveItem(i) {
-    console.log(i);
     if (i === this.state.activeMenuItem) {
       this.setState({ activeMenuItem: "ALL" });
     } else {
@@ -28,7 +29,6 @@ class Archive extends React.Component {
   }
 
   changeMainFilterItem(i) {
-    console.log(i);
     if (i === this.state.mainFilterItem) {
       this.setState({ mainFilterItem: "ALL" });
     } else {
@@ -37,33 +37,43 @@ class Archive extends React.Component {
   }
 
   render() {
-    console.log(this.props.itemData);
-    console.log(this.state.activeMenuItem)
     if (this.state.activeMenuItem === "ALL" && this.state.mainFilterItem === "ALL") {
       this.preData = this.props.itemData;
-    } else if(this.state.mainFilterItem === "Projekte") {
-      this.preData = this.props.itemData.filter((item) => item.template === "project" );
-    } else if(this.state.mainFilterItem === "Geschichten"){
-      this.preData = this.props.itemData.filter((item) => item.template === "story" );
+    } else if (this.state.mainFilterItem === "Projekte") {
+      this.preData = this.props.itemData.filter((item) => item.template === "project");
+    } else if (this.state.mainFilterItem === "Geschichten") {
+      this.preData = this.props.itemData.filter((item) => item.template === "story");
     }
 
-    if(this.state.activeMenuItem === "ALL"){
-      console.log('ALL');
-      this.data = this.preData; 
+    if (this.state.activeMenuItem === "ALL") {
+      this.data = this.preData;
     } else {
-      console.log('sub filter')
       this.data = this.preData.filter((item) => item.parents[0].name === this.state.activeMenuItem);
     }
 
     {
       this.list = [];
       this.props.itemData.map((item) => {
-        this.list.push(item.parents[0].name);
+        if (this.state.mainFilterItem === "ALL") {
+          console.log("push all");
+          this.list.push(item.parents[0].name);
+        } else {
+          if(this.state.mainFilterItem === "Projekte" && item.template === "project"){
+            console.log("projekte", item.parents[0].name);
+            this.list.push(item.parents[0].name);
+          } else if(this.state.mainFilterItem === "Geschichten" && item.template === "story"){
+            console.log("projekte", item.parents[0].name);
+            this.list.push(item.parents[0].name);
+          }
+        }
       });
 
+      this.uniqueList = [];
       this.list.forEach((element) => {
         if (!this.uniqueList.includes(element)) {
+          console.log(element);
           this.uniqueList.push(element);
+          console.log(this.uniqueList);
         }
       });
     }
