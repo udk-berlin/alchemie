@@ -71,7 +71,7 @@ class App extends React.Component {
           }
         `,
       })
-      .then((result) => this.setState({ itemData: result.data.items }));
+      .then((result) => this.setState({ itemData: result.data.items }))
   }
 
   render() {
