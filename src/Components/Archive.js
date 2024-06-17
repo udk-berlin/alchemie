@@ -51,11 +51,12 @@ class Archive extends React.Component {
       this.data = this.preData.filter((item) => item.parents[0].name === this.state.activeMenuItem);
     }
 
+    console.log(this.data);
+
     {
       this.list = [];
       this.props.itemData.map((item) => {
         if (this.state.mainFilterItem === "ALL") {
-          console.log("push all");
           this.list.push(item.parents[0].name);
         } else {
           if(this.state.mainFilterItem === "Projekte" && item.template === "project"){
@@ -71,9 +72,7 @@ class Archive extends React.Component {
       this.uniqueList = [];
       this.list.forEach((element) => {
         if (!this.uniqueList.includes(element)) {
-          console.log(element);
           this.uniqueList.push(element);
-          console.log(this.uniqueList);
         }
       });
     }
@@ -108,13 +107,13 @@ class Archive extends React.Component {
                   {item.thumbnail !== "" ? (
                     <Link to={"/project/" + item.id}>
                       <div className="imageContainer">
-                        <img src={item.thumbnail} onError={(i) => (i.target.style.display = "none")}></img>
+                        <img src={item.thumbnail}></img>
                       </div>
                     </Link>
                   ) : (
                     <Link to={"/project/" + item.id}>
-                      <div className="imageContainer" style={{ backgroundColor: item.template === "project" ? "red" : "blue", pointerEvents: "none", opacity: "0.1" }}>
-                        <img src={item.thumbnail} onError={(i) => (i.target.style.display = "none")}></img>
+                      <div className="imageContainer" style={{ backgroundColor: item.template === "project" ? "#FCE8A0" : "#EB4A1C", pointerEvents: "none", opacity: "0.5" }}>
+                        {/* <img src={item.thumbnail} alt={"images/image.png"}></img> */}
                       </div>
                     </Link>
                   )}
