@@ -1,1 +1,1 @@
-DE Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Hier finden Sie Geschichten, Anekdoten und Reflexionen der UdK-Gemeinschaft, die wie eine Momentaufnahme der UdK Berlin wirken. Sie sind eingeladen, diese Erzählungen zu erkunden und auch Teil davon zu werden, um so Ausschnitte unserer UdK-Geschichte sichtbar zu machen*. 

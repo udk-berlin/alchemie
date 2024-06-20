@@ -28,7 +28,7 @@ class Process extends React.Component {
   render() {  
     return (
         <>
-        <div className="headlineProcess">{this.props.language === 'DE' ? "Prozess" : "Process"}</div>
+        <div className="headlineProcess">{this.props.language === 'DE' ? "Hintergrund" : "Background"}</div>
         <div className="processContainer">
           <div className="processContent">
             <Markdown>{this.props.language === 'DE' ? this.state.textDE : this.state.textEN}</Markdown>

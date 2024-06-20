@@ -11,7 +11,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <h1><Link to="/">{this.props.language === 'DE' && this.props.windowWidth > 700 ? 'Alchemie der UdK' : this.props.language === 'EN' && this.props.windowWidth > 700 ? 'Alchemy of the Udk' : this.props.language === 'DE' && this.props.windowWidth < 700 ? 'Alchemie der Universität der Künste Berlin' : 'Alchemy at the Berlin University of the Arts'}</Link></h1>
+        <h1><Link to="/">{this.props.language === 'DE' && this.props.windowWidth > 700 ? 'Alchemie der UdK Berlin' : this.props.language === 'EN' && this.props.windowWidth > 700 ? 'Alchemy of the Udk Berlin' : this.props.language === 'DE' && this.props.windowWidth < 700 ? 'Alchemie der Universität der Künste Berlin' : 'Alchemy at the Berlin University of the Arts'}</Link></h1>
         <div className="languageSelector">
           <h1 onClick={()=> this.props.changeLanguage('DE')} style={{color: this.props.language === 'DE' ? 'black' : 'lightgrey'}}>DE</h1>
           <h1 onClick={()=> this.props.changeLanguage('EN')} style={{color: this.props.language === 'EN' ? 'black' : 'lightgrey'}}>EN</h1>
