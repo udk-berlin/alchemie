@@ -1,7 +1,8 @@
 # Imprint
-Berlin University of the Arts\
+Berlin University of the ArtsX\
 Corporation under public law\
-legally represented by the President Prof. Dr. Norbert Palz\
+legally represented by the President\
+Prof. Dr. Norbert Palz\
 Einsteinufer 43\ 
 D-10587 Berlin\
 Phone: 030/3185-0

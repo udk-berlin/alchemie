@@ -91,7 +91,7 @@ class Archive extends React.Component {
             </div>
             <div className="archiveNav">
               {this.uniqueList.map((item, key) => (
-                <div onClick={() => this.changeAcitveItem(item)} className="navItem" style={{ background: this.state.activeMenuItem === item ? "red" : "lightgrey" }}>
+                <div onClick={() => this.changeAcitveItem(item)} className="navItem" style={{background: this.state.activeMenuItem === item ? "#A0B4FC" : "lightgrey", userSelect: 'none' }}>
                   {item}
                 </div>
               ))}

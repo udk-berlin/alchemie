@@ -1,7 +1,8 @@
 # Impressum
 Universität der Künste Berlin\
 Körperschaft des öffentlichen Rechts\
-gesetzlich vertreten durch den Präsidenten Prof. Dr. Norbert Palz\
+gesetzlich vertreten durch den Präsidenten\ 
+Prof. Dr. Norbert Palz\
 Einsteinufer 43\
 D-10587 Berlin\
 Telefon: 030/3185-0

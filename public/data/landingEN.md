@@ -1,1 +1,1 @@
-EN Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Here you will find stories, anecdotes and reflections from the UdK community, which act as a snapshot of the UdK Berlin. You are invited to explore these stories and to become a part of them in order to make parts of our UdK history visible*.
