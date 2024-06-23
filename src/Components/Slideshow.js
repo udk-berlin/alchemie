@@ -6,7 +6,9 @@ class Slidehow extends React.Component {
     super();
     this.state = {
       textDE : '',
-      textEN : ''
+      textEN : '',
+
+      r : 99,
     }
   }
 
@@ -31,16 +33,17 @@ class Slidehow extends React.Component {
       .then(text => {
         this.setState({textEN : text}); 
       });
+
+      let r = Math.floor(Math.random() * 3);
+      this.setState({r : r});
     }
   
 
   render() {
     return (
       <div className="slideShowContainer">
-        {/* <img alt="" src="./images/headImage.jpg"></img> */}
-
         <video muted autoPlay loop>
-          <source src="./images/idle.mp4" type="video/mp4"/>
+          <source src={"./images/" + this.state.r +  ".mp4"} type="video/mp4"/>
         </video>
         <div className="overlay"></div>
         <div className="textOverlay">
