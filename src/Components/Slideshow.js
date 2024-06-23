@@ -43,7 +43,7 @@ class Slidehow extends React.Component {
     return (
       <div className="slideShowContainer">
         <video muted autoPlay loop>
-          <source src={"./images/" + this.state.r +  ".mp4"} type="video/mp4"/>
+          <source src={"./media/" + this.state.r +  ".mp4"} type="video/mp4"/>
         </video>
         <div className="overlay"></div>
         <div className="textOverlay">
