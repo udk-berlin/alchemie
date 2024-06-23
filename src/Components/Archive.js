@@ -51,8 +51,6 @@ class Archive extends React.Component {
       this.data = this.preData.filter((item) => item.parents[0].name === this.state.activeMenuItem);
     }
 
-    console.log(this.data);
-
     {
       this.list = [];
       this.props.itemData.map((item) => {
@@ -108,6 +106,9 @@ class Archive extends React.Component {
                     <Link to={"/project/" + item.id}>
                       <div className="imageContainer">
                         <img src={item.thumbnail}></img>
+                      </div>
+                      <div className="overlay" style={{backgroundColor: item.template === "project" ? "#FCE8A0" : "#EB4A1C"}}>
+                        <div className="text" style={{color: item.template === "project" ? "black" : "white"}}>{item.parents[0].name}</div>
                       </div>
                     </Link>
                   ) : (
