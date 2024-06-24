@@ -13,7 +13,7 @@ class Process extends React.Component {
 
   componentDidMount(){
     var time = new Date();
-    let date = new Date("06/27/2024 13:00");
+    let date = new Date("06/28/2024 13:00");
 
 
     console.log(date);
