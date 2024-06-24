@@ -28,7 +28,7 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: white;
+
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -70,7 +70,11 @@
 @media (max-width: 767px) {
   .slideShowContainer {
     .textOverlay {
-        max-width: 90vw;
+        width: 90vw;
+    }
+    .blurryOverlay {
+      width: 100vw;
+      height: 50vw;
     }
   }
 }
