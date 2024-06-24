@@ -46,7 +46,12 @@ class Slidehow extends React.Component {
           <source src={"./media/" + this.state.r +  ".mp4"} type="video/mp4"/>
         </video>
         <div className="overlay"></div>
+
+        
         <div className="textOverlay">
+          <h1>{this.props.language === 'DE' ? this.state.textDE : this.state.textEN}</h1>
+        </div>
+        <div className="blurryOverlay">
           <h1>{this.props.language === 'DE' ? this.state.textDE : this.state.textEN}</h1>
         </div>
       </div>
