@@ -14,8 +14,8 @@ class Main extends React.Component {
     return (
       <>
       <Slidehow language = {this.props.language}></Slidehow>
-      <Process language = {this.props.language}></Process>
       <Archive listItems={this.props.listItems} itemData={this.props.itemData} language = {this.props.language}></Archive>
+      <Process language = {this.props.language}></Process>
       <Participants language = {this.props.language}></Participants>
       </>
     );

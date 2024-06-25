@@ -2,7 +2,7 @@
     padding: 2vw; 
     padding-top: 10vw;
     h1 {
-        font-size: 1.5vw;
+        font-size: clamp(25px, 1vw, 50px);
     }
     h3 {
         margin-bottom: 0;

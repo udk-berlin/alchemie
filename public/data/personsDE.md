@@ -8,4 +8,4 @@ Umfrage: Michael Häfner, Professor für Kommunikationspsychologie am Institut f
 
 Danke an alle Mitarbeiter*innen, Lehrenden und Studierenden der UdK Berlin, die an den Formaten teilgenommen haben.
 
-Weitere Informationen zu den Unterstützer*innen und dem Projekt unter udk-berlin.de/udk-wills-wissen
+Weitere Informationen zu den Unterstützer*innen und dem Projekt unter [udk-berlin.de/udk-wills-wissen](https://www.udk-berlin.de/udk-wills-wissen)
