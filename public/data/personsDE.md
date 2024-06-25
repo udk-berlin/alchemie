@@ -1,4 +1,4 @@
-Websiteentwicklung: Felix Müller, Robert Schnüll und Andi Rueckl von /spaces
+Websiteentwicklung: Felix Müller, mit Unterstützung vom [Labor für digitale Infrastruktur](https://www.udk-berlin.de/universitaet/digitalisierung/labor-fuer-digitale-infrastruktur/)
 
 Illustrationen: Tanya Teibtner
 

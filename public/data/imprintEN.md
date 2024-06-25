@@ -10,7 +10,7 @@ Phone: 030/3185-0
 Sales tax identification number: DE811403316\
 Legal supervision: Senate Department for Science, Health, Care and Equality
 
-Development: udk/spaces, Felix Müller\
+Development: [laboratory for digital infrastructure](https://www.udk-berlin.de/universitaet/digitalisierung/labor-fuer-digitale-infrastruktur/), Felix Müller\
 Website design: Felix Müller\
 Illustrations: Tanya Teibtner\
 Editing: Strategic Marketing Unit

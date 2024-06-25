@@ -10,7 +10,7 @@ Telefon: 030/3185-0
 Umsatzsteuer-Identifikationsnummer: DE811403316 \
 Rechtsaufsicht: Senatsverwaltung für Wissenschaft, Gesundheit, Pflege und Gleichstellung
 
-Entwicklung: udk/spaces, Felix Müller \
+Entwicklung: [Labor für digitale Infrastruktur](https://www.udk-berlin.de/universitaet/digitalisierung/labor-fuer-digitale-infrastruktur/), Felix Müller \
 Websitegestaltung: Felix Müller \
 Illustrationen: Tanya Teibtner \
 Redaktion: Stabsstelle Strategisches Marketing

@@ -1,4 +1,4 @@
-Website development: Felix Müller, Robert Schnüll and Andi Rueckl from /spaces
+Website development: Felix Müller, with support from the [laboratory for digital infrastructure](https://www.udk-berlin.de/universitaet/digitalisierung/labor-fuer-digitale-infrastruktur/)
 
 Illustrations: Tanya Teibtner
 
