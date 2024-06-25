@@ -1,18 +1,18 @@
 # Impressum
-Universität der Künste Berlin\
-Körperschaft des öffentlichen Rechts\
-gesetzlich vertreten durch den Präsidenten\ 
-Prof. Dr. Norbert Palz\
-Einsteinufer 43\
-D-10587 Berlin\
+Universität der Künste Berlin \
+Körperschaft des öffentlichen Rechts \
+gesetzlich vertreten durch den Präsidenten \
+Prof. Dr. Norbert Palz \
+Einsteinufer 43 \
+D-10587 Berlin \
 Telefon: 030/3185-0
 
-Umsatzsteuer-Identifikationsnummer: DE811403316\
+Umsatzsteuer-Identifikationsnummer: DE811403316 \
 Rechtsaufsicht: Senatsverwaltung für Wissenschaft, Gesundheit, Pflege und Gleichstellung
 
-Entwicklung: udk/spaces, Felix Müller\
-Websitegestaltung: Felix Müller\
-Illustrationen: Tanya Teibtner\
+Entwicklung: udk/spaces, Felix Müller \
+Websitegestaltung: Felix Müller \
+Illustrationen: Tanya Teibtner \
 Redaktion: Stabsstelle Strategisches Marketing
 
 ### Hinweis

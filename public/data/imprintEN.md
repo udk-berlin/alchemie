@@ -1,10 +1,10 @@
 # Imprint
-Berlin University of the ArtsX\
-Corporation under public law\
-legally represented by the President\
-Prof. Dr. Norbert Palz\
-Einsteinufer 43\ 
-D-10587 Berlin\
+Berlin University of the Arts \
+Corporation under public law \
+legally represented by the President \
+Prof. Dr. Norbert Palz \
+Einsteinufer 43  
+D-10587 Berlin \
 Phone: 030/3185-0
 
 Sales tax identification number: DE811403316\
