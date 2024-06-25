@@ -45,9 +45,9 @@ class Project extends React.Component {
                 Object.keys(this.state.data.languages[this.props.language].content).map((index) =>
                   this.state.data.languages[this.props.language].content[index].template === "text" ? (
                     <div>{parse(this.state.data.languages[this.props.language].content[index].formatted_content)}</div>
-                  ) : (
+                  ) : this.state.data.languages[this.props.language].content[index].content.split(' ')[8].split('"')[1].length !== 0 ? (
                     <iframe width="100%" height="500px" allowfullscreen="" frameBorder="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src={this.state.data.languages[this.props.language].content[index].content.split(' ')[8].split('"')[1]}></iframe>
-                  )
+                  ) : null
                 )
               ) : (
                 <p>{this.props.language === "DE" ? "Noch kein Inhalt vorhanden, bitte kommen Sie später wieder" : "No content available yet, please come back later"}</p>
